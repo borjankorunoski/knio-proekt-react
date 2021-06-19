@@ -1,9 +1,7 @@
 import './components/HomePage.js'
-import HomePage from "./components/HomePage";
 const App = () => {
   return (
     <div>
-      <HomePage/>
     </div>
   );
 }
