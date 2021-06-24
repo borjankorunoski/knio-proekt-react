@@ -1,7 +1,7 @@
 import React from "react";
 import {Card, ListGroup} from "react-bootstrap";
 import HomePageAnnouncement from "./HomePageAnnouncement";
-import {announcements} from "../../Data/Data";
+import {announcements} from "../../Data/AnnouncementsData";
 
 const HomePageAnnouncementList = () => {
   let today = new Date();
@@ -23,7 +23,7 @@ const HomePageAnnouncementList = () => {
         </Card.Title>
         <ListGroup>
           {announcements.map(announcement => 
-              <HomePageAnnouncement text={announcement} />
+              <HomePageAnnouncement text={announcement.text} variant={announcement.variant}/>
           )}
 
         </ListGroup>
