@@ -10,11 +10,9 @@ const HomePageAnnouncementList = () => {
   let yyyy = today.getFullYear();
   let HH = today.getHours();
   let MM = today.getMinutes();
-
   today = dd + '/' + mm + '/' + yyyy;
   let time = HH + ":" + MM;
   
-
   return(
     <Card className='mt-3'>
       <Card.Body>
