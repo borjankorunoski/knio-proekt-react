@@ -1,6 +1,7 @@
 import React from "react";
 import {Card, ListGroup} from "react-bootstrap";
 import HomePageAnnouncement from "./HomePageAnnouncement";
+import {announcements} from "../../Data/AnnouncementsData";
 
 const HomePageAnnouncementList = () => {
   let today = new Date();
@@ -9,9 +10,9 @@ const HomePageAnnouncementList = () => {
   let yyyy = today.getFullYear();
   let HH = today.getHours();
   let MM = today.getMinutes();
-
   today = dd + '/' + mm + '/' + yyyy;
   let time = HH + ":" + MM;
+  
   return(
     <Card className='mt-3'>
       <Card.Body>
@@ -19,9 +20,10 @@ const HomePageAnnouncementList = () => {
           Известувања
         </Card.Title>
         <ListGroup>
-          <HomePageAnnouncement text="Итно известување" variant="danger"/>
-          <HomePageAnnouncement text="Предупредување" variant="warning"/>
-          <HomePageAnnouncement text="Информативно известување" variant="info"/>
+          {announcements.map(announcement => 
+              <HomePageAnnouncement text={announcement.text} variant={announcement.variant}/>
+          )}
+
         </ListGroup>
       </Card.Body>
       <Card.Footer>
