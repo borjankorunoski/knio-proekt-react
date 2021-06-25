@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {Container} from "react-bootstrap";
 import AuthenticationPage from "./components/pages/AuthenticationPage";
 import LocationsPage from "./components/pages/LocationsPage";
+import ProfilePage from "./components/pages/ProfilePage";
 const App = () => {
   return (
     <Container>
@@ -10,8 +11,9 @@ const App = () => {
       <hr/>
       <AuthenticationPage/>
       <LocationsPage/>
+      <ProfilePage/>
     </Container>
   );
-}
+};
 
 export default App;
