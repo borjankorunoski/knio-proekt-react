@@ -1,7 +1,9 @@
 import React from "react";
 import {Form, Button} from "react-bootstrap";
+import {locations} from "../../Data/LocationsData";
 
 const HomePageForm = () => {
+  let options = locations.map(l => <option>{l.title}</option>)
   return(
     <Form className="mt-3">
       <Form.Group className="mb-3" controlId="dateFrom">
@@ -23,17 +25,15 @@ const HomePageForm = () => {
       <Form.Group className="mb-3" controlId="where">
         <Form.Label>Изберете Локација: </Form.Label>
         <Form.Control as="select">
-          <option value='1'>Локација 1</option>
-          <option value='2'>Локација 2</option>
-          <option value='3'>Локација 3</option>
+          {options}
         </Form.Control>
         <Form.Text className="text-muted">
           Изберете ја читалната каде што сакате да резервирате место.
         </Form.Text>
       </Form.Group>
 
-      <Button variant="outline-primary" type="submit" className="float-right">
-        Submit
+      <Button variant="primary" type="submit" className="float-right">
+        Испрати
       </Button>
     </Form>
   )

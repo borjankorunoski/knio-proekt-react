@@ -4,15 +4,28 @@ import {Container} from "react-bootstrap";
 import AuthenticationPage from "./components/pages/AuthenticationPage";
 import LocationsPage from "./components/pages/LocationsPage";
 import ProfilePage from "./components/pages/ProfilePage";
+import Route from "./components/navigation bar components/Route";
+import NavigationBar from "./components/navigation bar components/NavigationBar";
+
 const App = () => {
   return (
-    <Container>
-      <HomePage/>
-      <hr/>
-      <AuthenticationPage/>
-      <LocationsPage/>
-      <ProfilePage/>
-    </Container>
+    <div>
+      <NavigationBar/>
+      <Container>
+        <Route path='/'>
+          <HomePage/>
+        </Route>
+        <Route path='/login'>
+          <AuthenticationPage/>
+        </Route>
+        <Route path='/locations'>
+          <LocationsPage/>
+        </Route>
+        <Route path='/profile'>
+          <ProfilePage/>
+        </Route>
+      </Container>
+    </div>
   );
 };
 

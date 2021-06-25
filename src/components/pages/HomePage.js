@@ -6,7 +6,6 @@ import HomePageAnnouncementList from "../home page components/HomePageAnnounceme
 const HomePage = () => {
   return(
     <Container>
-      <h1 style={{color: 'red'}}>Почетна страна</h1>
       <Row>
         <Col>
           <HomePageForm/>

@@ -17,20 +17,23 @@ const bookingsList = bookings.map(booking =>
 
 const BookingList = () => {
     return (
+      <div>
+        <h1>Твои резервации: </h1>
         <Table striped bordered hover>
-            <thead>
+          <thead>
             <tr>
-                <th>#</th>
-                <th>Читална</th>
-                <th>Термин</th>
-                <th>Датум</th>
-                <th>Резервација направена на:</th>
+              <th>#</th>
+              <th>Читална</th>
+              <th>Термин</th>
+              <th>Датум</th>
+              <th>Резервација направена на:</th>
             </tr>
-            </thead>
-            <tbody>
+          </thead>
+          <tbody>
             {bookingsList}
-            </tbody>
+          </tbody>
         </Table>
+      </div>
     );
 };
 

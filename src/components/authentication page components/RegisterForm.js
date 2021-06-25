@@ -7,7 +7,7 @@ const RegisterForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return(
-    <Form>
+    <Form style={{border: '1px gray solid', borderRadius: '1rem', padding: '0.5rem'}}>
       <Form.Group controlId="name">
         <Form.Label>Име</Form.Label>
         <Form.Control type="text" name='name' value={name} placeholder="Внеси име" onChange={(event) => {setName(event.target.value)}}/>
@@ -20,7 +20,7 @@ const RegisterForm = () => {
 
       <Form.Group controlId="emailadd">
         <Form.Label>Електронска пошта</Form.Label>
-        <Form.Control type="email" name='email' value={email} placeholder="Внеси е-мејл" onChange={(event) => {setEmail(event.target.value)}}/>
+        <Form.Control type="email" name='email' value={email} placeholder="Внеси валидна електронска пошта" onChange={(event) => {setEmail(event.target.value)}}/>
       </Form.Group>
 
       <Form.Group controlId="passcode">
@@ -29,7 +29,7 @@ const RegisterForm = () => {
       </Form.Group>
 
       <Button variant="primary" type="submit">
-        Register
+        Регистрација
       </Button>
     </Form>
   );
