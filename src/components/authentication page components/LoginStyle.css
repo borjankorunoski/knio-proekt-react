@@ -1,0 +1,23 @@
+h1 {
+    overflow: hidden;
+    padding-bottom: 10%;
+    text-align: center;
+    text-shadow: 2px 2px gray;
+}
+
+
+#left{
+    width:50%;
+    padding: 12% 8% 15%;
+    float:left;
+}
+
+#right{
+    width:50%;
+    padding: 12% 8% 15%;
+    float:right;
+}
+
+#signupbutton, #loginbutton{
+    margin-top: 4%;
+}
