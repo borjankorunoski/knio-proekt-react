@@ -1,13 +1,19 @@
 import React from "react";
 import BookingList from "../profile page components/BookingList";
 import UserInfo from "../profile page components/UserInfo";
+import {Col, Row} from "react-bootstrap";
 
 const ProfilePage = () => {
     return(
         <React.Fragment>
-            <UserInfo/>
-            <h4>Твои резервации: </h4>
-            <BookingList/>
+          <Row>
+            <Col>
+              <UserInfo/>
+            </Col>
+            <Col>
+              <BookingList/>
+            </Col>
+          </Row>
         </React.Fragment>
     );
 };
